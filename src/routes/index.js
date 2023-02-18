@@ -1,12 +1,14 @@
 const { Router } = require('express');
 
+const UserController = require('../controllers/userController')
+
 const routes = Router();
 
 routes.get('/', (req, res) => {
     res.json('Sivuquinha')
 })
 
-routes.post('/users');
+routes.post('/users', UserController.createUser);
 routes.get('/users');
 routes.get('/users/:user_id');
 routes.post('/login');
