@@ -26,7 +26,7 @@ const Schema = new mongoose.Schema({
     payment: {
         card: {
             number: {
-                tyupe: String,
+                type: String,
             },
             cvc: {
                 type: String,
