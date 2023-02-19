@@ -9,9 +9,11 @@ routes.get('/', (req, res) => {
 })
 
 routes.post('/users', UserController.createUser);
-routes.get('/users');
-routes.get('/users/:user_id');
+routes.get('/users', UserController.getUsers);
+routes.get('/users/:user_id', UserController.getUserById);
+
 routes.post('/login');
+
 routes.post('/cart/:user_id')
 routes.get('/cart/:user_id/:cart_id');
 routes.get('/cart/:user_id');
